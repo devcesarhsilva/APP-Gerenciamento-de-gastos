@@ -1,0 +1,33 @@
+BoxLayout:
+    orientation: 'vertical'
+
+    Spinner:
+        id: spinner_cartoes
+        text: 'Selecione o cartão'
+        values: ['Cartão 1', 'Cartão 2', 'Cartão 3']
+        size_hint: None, None
+        size: 200, 44
+
+    Spinner:
+        id: tipo_compra
+        text: 'Tipo de compra'
+        values: ['À vista', 'Parcelada']
+        size_hint: None, None
+        size: 200, 44
+
+    TextInput:
+        id: valor_input
+        hint_text: "Digite o valor total"
+        multiline: False
+
+    Button:
+        text: "Adicionar Compra"
+        size_hint: None, None
+        size: 200, 44
+        on_press: app.adicionar_compra()
+
+    Button:
+        text: "Mostrar Resumo"
+        size_hint: None, None
+        size: 200, 44
+        on_press: app.mostrar_resumo()
